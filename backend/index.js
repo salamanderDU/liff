@@ -24,7 +24,7 @@ await request.post({
  headers: { "Content-Type": "application/x-www-form-urlencoded" },
  form: {
    access_token: `${accessToken}`,
-   client_id: CHANNEL_ID,
-   client_secret: CHANNEL_SECRET
+   client_id: '1655971677',
+   client_secret: '9f9d05cb88818468b3d44b8c40d7864c'
  } 
 })
