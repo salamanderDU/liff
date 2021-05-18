@@ -95,11 +95,127 @@
     async function sendMsg() {
       if (liff.getContext().type !== "none") {
         await liff.sendMessages([
-          {
-            "type": "sticker",
-            "stickerId": 1,
-            "packageId": 1
-          }
+         {
+                "type": "bubble",
+                "direction": "ltr",
+                "body": {
+                  "type": "box",
+                  "layout": "vertical",
+                  "spacing": "md",
+                  "action": {
+                    "type": "uri",
+                    "label": "Action",
+                    "uri": "https://linecorp.com"
+                  },
+                  "contents": [
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "flex": 1,
+                      "spacing": "xl",
+                      "margin": "none",
+                      "backgroundColor": "#53DFABFF",
+                      "borderColor": "#36F09EFF",
+                      "cornerRadius": "8px",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "ความดันล่าสุด",
+                          "weight": "bold",
+                          "size": "sm",
+                          "contents": []
+                        },
+                        {
+                          "type": "text",
+                          "text": "120/80",
+                          "weight": "bold",
+                          "size": "xxl",
+                          "align": "center",
+                          "contents": []
+                        },
+                        {
+                          "type": "text",
+                          "text": "บันทึกโดย getName",
+                          "weight": "regular",
+                          "size": "xxs",
+                          "align": "end",
+                          "contents": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "spacing": "sm",
+                      "contents": [
+                        {
+                          "type": "box",
+                          "layout": "baseline",
+                          "contents": [
+                            {
+                              "type": "text",
+                              "text": "120/80",
+                              "weight": "bold",
+                              "margin": "sm",
+                              "contents": []
+                            },
+                            {
+                              "type": "text",
+                              "text": "<time>",
+                              "size": "sm",
+                              "color": "#AAAAAA",
+                              "align": "end",
+                              "contents": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "box",
+                          "layout": "baseline",
+                          "contents": [
+                            {
+                              "type": "text",
+                              "text": "<ความดันบน/ล่าง>",
+                              "weight": "bold",
+                              "flex": 0,
+                              "margin": "sm",
+                              "contents": []
+                            },
+                            {
+                              "type": "text",
+                              "text": "<time>",
+                              "size": "sm",
+                              "color": "#AAAAAA",
+                              "align": "end",
+                              "contents": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": "Sauce, Onions, Pickles, Lettuce & Cheese",
+                      "size": "xxs",
+                      "color": "#AAAAAA",
+                      "wrap": true,
+                      "contents": []
+                    },
+                    {
+                      "type": "button",
+                      "action": {
+                        "type": "uri",
+                        "label": "ดูข้อมูลย้อนหลัง",
+                        "uri": "https://liff.line.me/1655971677-6M0jE212"
+                      },
+                      "color": "#E8C74AFF",
+                      "margin": "md",
+                      "height": "md",
+                      "gravity": "bottom"
+                    }
+                  ]
+                }
+              }
         ])
         alert("Message sent")
       }
